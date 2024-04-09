@@ -21,5 +21,6 @@ public class OBBlocks {
             lightRadius = 30f;
             lightColor = Color.orange.cpy().a(0.15f);
         }};
+        Blocks.carbonStone.asFloor().attributes.set(Attribute.water, 0f);
     }
 }
