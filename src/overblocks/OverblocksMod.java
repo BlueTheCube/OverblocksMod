@@ -1,9 +1,9 @@
-package template;
+package overblocks;
 
 import mindustry.mod.*;
-import template.gen.*;
+import overblocks.gen.*;
 
-public class ModTemplate extends Mod{
+public class OverblocksMod extends Mod{
     @Override
     public void loadContent(){
         EntityRegistry.register();
