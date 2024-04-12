@@ -29,19 +29,19 @@ public class OBBlocks {
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, 0f);
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
-            requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 135, Items.graphite, 90, Items.titanium, 90, Items.thorium, 20));
+            requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 135, Items.graphite, 90, Items.titanium, 90, Items.plastanium, 20));
             hasItems = true;
             liquidCapacity = 60f;
-            craftTime = 60f;
+            craftTime = 90f;
             outputItem = new ItemStack(Items.plastanium, 4);
             size = 3;
-            health = 420;
+            health = 400;
             hasPower = hasLiquids = true;
             craftEffect = Fx.formsmoke;
             updateEffect = Fx.plasticburn;
             drawer = new DrawMulti(new DrawDefault(), new DrawFade());
 
-            consumeLiquid(Liquids.oil, 0.4f);
+            consumeLiquid(Liquids.oil, 0.5f);
             consumePower(4f);
             consumeItem(Items.titanium, 6);
         }};
