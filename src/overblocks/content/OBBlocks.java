@@ -29,10 +29,10 @@ public class OBBlocks {
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, 0f);
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
-            requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 135, Items.graphite, 90, Items.titanium, 90, Items.plastanium, 20));
+            requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 150, Items.graphite, 100, Items.titanium, 100, Items.plastanium, 30));
             hasItems = true;
             liquidCapacity = 60f;
-            craftTime = 90f;
+            craftTime = 60f * 1.5f;
             outputItem = new ItemStack(Items.plastanium, 4);
             size = 3;
             health = 400;
