@@ -44,6 +44,7 @@ public class OBBlocks {
             consumeLiquid(Liquids.oil, 0.5f);
             consumePower(4f);
             consumeItem(Items.titanium, 6);
+            consumeItem(Items.coal, 2);
         }};
     }
 }
