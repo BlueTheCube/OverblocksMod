@@ -16,6 +16,8 @@ public class OverblocksMod extends Mod{
     @Override
     public void loadContent(){
         EntityRegistry.register();
+        OBItems.load();
         OBBlocks.load();
+        Planets.erekir.hiddenItems.add(OBItems.rosingAlloy);
     }
 }
