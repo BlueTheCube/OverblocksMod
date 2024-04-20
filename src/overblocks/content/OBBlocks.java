@@ -37,6 +37,7 @@ public class OBBlocks {
             liquidDrop = Liquids.slag;
             isLiquid = true;
             cacheLayer = CacheLayer.slag;
+            liquidMultiplier = 0.5f;
             attributes.set(Attribute.heat, 0.8f);
 
             emitLight = true;
