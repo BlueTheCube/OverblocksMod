@@ -13,7 +13,7 @@ import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, shallowSlag, plastaniumCrusher;
+    public static Block hotCarbonStone, shallowSlag, carbonPebbles, plastaniumCrusher;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -44,6 +44,8 @@ public class OBBlocks {
             lightRadius = 30f;
             lightColor = Color.orange.cpy().a(0.38f);
         }};
+
+        carbonPebbles = new OverlayFloor("carbon-pebbles");
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
             requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 150, Items.graphite, 100, Items.titanium, 100, Items.plastanium, 30));
