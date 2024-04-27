@@ -13,7 +13,7 @@ import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, shallowSlag, carbonPebbles, plastaniumCrusher;
+    public static Block hotCarbonStone, magmaCarbonStone, shallowSlag, carbonPebbles, plastaniumCrusher;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -27,7 +27,19 @@ public class OBBlocks {
             lightRadius = 30f;
             lightColor = Color.orange.cpy().a(0.15f);
         }};
-        Blocks.carbonStone.asFloor().attributes.set(Attribute.water, 0f);
+
+        magmaCarbonStone = new Floor("magmacarbon-stone"){{
+            attributes.set(Attribute.heat, 0.75f);
+            attributes.set(Attribute.water, -0.75f);
+            wall = Blocks.carbonWall;
+            blendGroup = Blocks.carbonStone;
+            decoration = Blocks.carbonBoulder;
+            variants = 3;
+            emitLight = true;
+            lightRadius = 50f;
+            lightColor = Color.orange.cpy().a(0.3f);
+        }};
+        Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
         shallowSlag = new Floor("shallow-slag"){{
             status = StatusEffects.melting;
