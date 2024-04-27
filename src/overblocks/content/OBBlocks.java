@@ -17,6 +17,7 @@ public class OBBlocks {
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
+            mapColor = Color.valueOf("5f433d");
             attributes.set(Attribute.heat, 0.5f);
             attributes.set(Attribute.water, -0.5f);
             wall = Blocks.carbonWall;
@@ -29,6 +30,7 @@ public class OBBlocks {
         }};
 
         magmaCarbonStone = new Floor("magmacarbon-stone"){{
+            mapColor = Color.valueOf("855443");
             attributes.set(Attribute.heat, 0.75f);
             attributes.set(Attribute.water, -0.75f);
             wall = Blocks.carbonWall;
@@ -42,6 +44,7 @@ public class OBBlocks {
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
         shallowSlag = new Floor("shallow-slag"){{
+            mapColor = Color.valueOf("cc5035");
             status = StatusEffects.melting;
             statusDuration = 240f;
             speedMultiplier = 0.19f;
