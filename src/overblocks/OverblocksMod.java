@@ -18,6 +18,11 @@ public class OverblocksMod extends Mod{
         EntityRegistry.register();
         OBItems.load();
         OBBlocks.load();
+        loadOther();
+    }
+
+    public void loadOther(){
+        Blocks.sporeMoss.asFloor().blendGroup = Blocks.moss;
         Planets.erekir.hiddenItems.add(OBItems.rosingAlloy);
     }
 }
