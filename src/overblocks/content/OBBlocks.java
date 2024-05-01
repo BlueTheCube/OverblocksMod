@@ -13,7 +13,7 @@ import mindustry.world.meta.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, shallowSlag, carbonPebbles, plastaniumCrusher;
+    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, plastaniumCrusher;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -40,6 +40,17 @@ public class OBBlocks {
             emitLight = true;
             lightRadius = 50f;
             lightColor = Color.orange.cpy().a(0.3f);
+        }};
+
+        graphiticFloor = new Floor("graphitic-floor"){{
+            mapColor = Color.valueOf("444c67");
+            itemDrop = Items.graphite;
+            playerUnmineable = true;
+            attributes.set(Attribute.water, -0.1f);
+            wall = Blocks.carbonWall;
+            blendGroup = Blocks.carbonStone;
+            decoration = Blocks.carbonBoulder;
+            variants = 3;
         }};
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
