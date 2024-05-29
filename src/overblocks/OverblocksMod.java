@@ -34,6 +34,5 @@ public class OverblocksMod extends Mod{
 
     public void loadOther(){
         Blocks.sporeMoss.asFloor().blendGroup = Blocks.moss;
-        Planets.erekir.hiddenItems.add(OBItems.rosingAlloy);
     }
 }
