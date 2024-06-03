@@ -5,7 +5,7 @@ import mindustry.gen.*;
 import mindustry.world.blocks.defense.*;
 
 public class ReflectionWall extends Wall{
-    public float damageMultiplier = 6f / 4;
+    public float damageMultiplier = 1f;
     public ReflectionWall(String name){
         super(name);
     }

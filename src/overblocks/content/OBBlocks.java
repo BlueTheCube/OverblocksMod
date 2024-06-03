@@ -14,7 +14,7 @@ import overblocks.world.blocks.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, plastaniumCrusher, directDeflectWall;
+    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, plastaniumCrusher, plastaniumDeflectWall;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -96,7 +96,7 @@ public class OBBlocks {
             consumeItem(Items.coal, 2);
         }};
 
-        directDeflectWall = new ReflectionWall("direct-deflect-wall"){{
+        plastaniumDeflectWall = new ReflectionWall("plastanium-deflect-wall"){{
             requirements(Category.defense, ItemStack.with(Items.phaseFabric, 24, Items.plastanium, 16, Items.metaglass, 8));
             health = 200 * 4 * 4;
             size = 2;
