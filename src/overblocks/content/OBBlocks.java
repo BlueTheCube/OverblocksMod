@@ -98,7 +98,7 @@ public class OBBlocks {
 
         directDeflectWall = new ReflectionWall("direct-deflect-wall"){{
             requirements(Category.defense, ItemStack.with(Items.phaseFabric, 24, Items.plastanium, 16, Items.metaglass, 8));
-            health = 210 * 4 * 4;
+            health = 200 * 4 * 4;
             size = 2;
             insulated = true;
             absorbLasers = true;
