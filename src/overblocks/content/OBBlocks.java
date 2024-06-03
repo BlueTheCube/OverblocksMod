@@ -9,11 +9,12 @@ import mindustry.world.blocks.environment.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
+import overblocks.world.blocks.*;
 
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, plastaniumCrusher;
+    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, plastaniumCrusher, directDeflectWall;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -93,6 +94,15 @@ public class OBBlocks {
             consumePower(4f);
             consumeItem(Items.titanium, 6);
             consumeItem(Items.coal, 2);
+        }};
+
+        directDeflectWall = new ReflectionWall("direct-deflect-wall"){{
+            requirements(Category.defense, ItemStack.with(Items.phaseFabric, 24, Items.plastanium, 16, Items.metaglass, 8));
+            health = 210 * 4 * 4;
+            size = 2;
+            insulated = true;
+            absorbLasers = true;
+            envDisabled |= Env.scorching;
         }};
     }
 }
