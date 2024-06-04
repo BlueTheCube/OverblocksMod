@@ -57,7 +57,7 @@ public class OBBlocks {
         }};
         ceriseStone = new Floor("cerise-stone");
         Blocks.redStone.asFloor().attributes.set(Attribute.water, -0.1f);
-        Blocks.denseRedStone.attributes.set(Attribute.water, -0.1f);
+        Blocks.denseRedStone.asFloor().attributes.set(Attribute.water, -0.1f);
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
         shallowSlag = new Floor("shallow-slag"){{
