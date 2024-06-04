@@ -14,7 +14,7 @@ import overblocks.world.blocks.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, plastaniumCrusher, plastaniumDeflectWall;
+    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, beryllicVent, plastaniumCrusher, plastaniumDeflectWall;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -76,6 +76,11 @@ public class OBBlocks {
         }};
 
         carbonPebbles = new OverlayFloor("carbon-pebbles");
+
+        beryllicVent = new SteamVent("beryllic-vent"){{
+            parent = blendGroup = Blocks.beryllicStone;
+            attributes.set(Attribute.steam, 1f);
+        }};
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
             requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 150, Items.graphite, 100, Items.titanium, 100, Items.plastanium, 30));
