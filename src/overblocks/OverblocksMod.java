@@ -21,6 +21,7 @@ public class OverblocksMod extends Mod{
                 OBBlocks.hotCarbonStone.asFloor().mapColor = Color.valueOf("5f433d");
                 OBBlocks.magmaCarbonStone.asFloor().mapColor = Color.valueOf("855443");
                 OBBlocks.shallowSlag.asFloor().mapColor = Color.valueOf("cc5035");
+                OBBlocks.ceriseStoneWall.asFloor().mapColor = Color.valueOf("DB959F");
             });
         });
     }

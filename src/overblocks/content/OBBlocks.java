@@ -14,7 +14,7 @@ import overblocks.world.blocks.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, shallowSlag, carbonPebbles, beryllicVent, plastaniumCrusher, plastaniumDeflectWall;
+    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, plastaniumCrusher, plastaniumDeflectWall;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -55,6 +55,9 @@ public class OBBlocks {
             decoration = Blocks.carbonBoulder;
             variants = 3;
         }};
+        ceriseStone = new Floor("cerise-stone");
+        Blocks.redStone.asFloor().attributes.set(Attribute.water, -0.1f);
+        Blocks.denseRedStone.attributes.set(Attribute.water, -0.1f);
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
         shallowSlag = new Floor("shallow-slag"){{
@@ -81,6 +84,17 @@ public class OBBlocks {
             parent = blendGroup = Blocks.beryllicStone;
             attributes.set(Attribute.steam, 1f);
         }};
+
+        ceriseVent = new SteamVent("cerise-vent"){{
+            parent = blendGroup = ceriseStone;
+            attributes.set(Attribute.steam, 1f);
+        }};
+
+        ceriseStoneWall = new StaticWall("cerise-stone-wall"){{
+            ceriseStone.asFloor().wall = this;
+            attributes.set(Attribute.sand, 0.5f);
+        }};
+        Blocks.crystallineStoneWall.attributes.set(Attribute.sand, 0.5f);
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
             requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 150, Items.graphite, 100, Items.titanium, 100, Items.plastanium, 30));
