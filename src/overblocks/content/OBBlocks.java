@@ -14,7 +14,7 @@ import overblocks.world.blocks.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, plastaniumCrusher, plastaniumDeflectWall;
+    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, ceriseBoulder, plastaniumCrusher, plastaniumDeflectWall;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -92,9 +92,15 @@ public class OBBlocks {
 
         ceriseStoneWall = new StaticWall("cerise-stone-wall"){{
             ceriseStone.asFloor().wall = this;
-            attributes.set(Attribute.sand, 0.5f);
+            attributes.set(Attribute.sand, 1.1f);
         }};
-        Blocks.crystallineStoneWall.attributes.set(Attribute.sand, 0.5f);
+        Blocks.crystallineStoneWall.attributes.set(Attribute.sand, 0.7f);
+        Blocks.arkyicWall.attributes.set(Attribute.sand, 1.1f);
+
+        ceriseBoulder = new Prop("cerise-boulder"){{
+            variants = 2;
+            ceriseStone.asFloor().decoration = this;
+        }};
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
             requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 150, Items.graphite, 100, Items.titanium, 100, Items.plastanium, 30));
