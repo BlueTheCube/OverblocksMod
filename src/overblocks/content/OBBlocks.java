@@ -2,9 +2,12 @@ package overblocks.content;
 
 import arc.graphics.*;
 import mindustry.content.*;
+import mindustry.entities.bullet.*;
+import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.world.*;
+import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
@@ -14,7 +17,11 @@ import overblocks.world.blocks.*;
 import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
-    public static Block hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, ceriseBoulder, plastaniumCrusher, plastaniumDeflectWall;
+    public static Block
+            //enviroment
+            hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, ceriseBoulder,
+            //other
+            plastaniumCrusher, plastaniumDeflectWall, devastation;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -128,6 +135,40 @@ public class OBBlocks {
             insulated = true;
             absorbLasers = true;
             envDisabled |= Env.scorching;
+        }};
+
+        devastation = new PowerTurret("devastation"){{
+            requirements(Category.turret, with(Items.titanium, 750, Items.lead, 350, Items.metaglass, 250, Items.surgeAlloy, 325, Items.silicon, 275));
+            range = 360f;
+            shootSound = Sounds.laserblast;
+            chargeSound = Sounds.lasercharge;
+            shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
+            recoil = 3.5f;
+            size = 4;
+            reload = 275f;
+            shake = 2f;
+            smokeEffect = Fx.none;
+            shootType = new LaserBulletType(420){{
+                width = 75f;
+
+                lifetime = 65f;
+
+                largeHit = true;
+
+                chargeEffect = OBFx.orangeLaserCharge;
+
+                sideAngle = 15f;
+                sideWidth = 0f;
+                sideLength = 0f;
+                colors = new Color[]{Color.valueOf("ec7458aa"), Color.valueOf("ff9c5a"), Color.white};
+                incendChance = 0.4f;
+                incendSpread = 2f;
+                incendAmount = 1;
+                status = StatusEffects.burning;
+            }};
+            scaledHealth = 200;
+            coolant = consumeCoolant(0.5f);
+            consumePower(13f);
         }};
     }
 }
