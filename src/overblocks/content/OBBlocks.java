@@ -145,24 +145,26 @@ public class OBBlocks {
             shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
             recoil = 3.5f;
             size = 4;
-            reload = 275f;
+            reload = 300f;
             shake = 2f;
+            moveWhileCharging = false;
             smokeEffect = Fx.none;
-            shootType = new LaserBulletType(420){{
-                width = 75f;
+            shootType = new LaserBulletType(450){{
+                length = 360f;
+                width = 45f;
 
                 lifetime = 65f;
 
                 largeHit = true;
-
+                hitSize = 4;
                 chargeEffect = OBFx.orangeLaserCharge;
 
                 sideAngle = 15f;
                 sideWidth = 0f;
                 sideLength = 0f;
                 colors = new Color[]{Color.valueOf("ec7458aa"), Color.valueOf("ff9c5a"), Color.white};
-                incendChance = 0.4f;
-                incendSpread = 2f;
+                incendChance = 0.7f;
+                incendSpread = 5f;
                 incendAmount = 1;
                 status = StatusEffects.burning;
             }};
