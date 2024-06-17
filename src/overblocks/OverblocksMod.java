@@ -32,7 +32,7 @@ public class OverblocksMod extends Mod{
                 if(b instanceof SolidPump sp && sp.result == Liquids.water){
                     sp.envRequired |= Env.groundWater;
                 }
-                if(b instanceof GenericCrafter gc && gc.outputItem.item == Items.sporePod){
+                if(b instanceof AttributeCrafter gc && gc.outputItem.item == Items.sporePod){
                     gc.envRequired |= Env.spores;
                 }
             });
