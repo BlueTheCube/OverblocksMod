@@ -3,12 +3,14 @@ package overblocks;
 import arc.*;
 import arc.graphics.*;
 import arc.util.*;
+import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.*;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.world.*;
 import mindustry.world.blocks.environment.*;
+import mindustry.world.blocks.production.*;
 import mindustry.world.meta.*;
 import overblocks.content.*;
 import overblocks.gen.*;
@@ -22,6 +24,17 @@ public class OverblocksMod extends Mod{
                 OBBlocks.magmaCarbonStone.asFloor().mapColor = Color.valueOf("855443");
                 OBBlocks.shallowSlag.asFloor().mapColor = Color.valueOf("cc5035");
                 OBBlocks.ceriseStoneWall.mapColor = Color.valueOf("DB959F");
+            });
+        });
+
+        Events.on(ContentInitEvent.class, e ->{
+            Vars.content.blocks().each(b -> {
+                if(b instanceof SolidPump sp && sp.result == Liquids.water){
+                    sp.envRequired |= Env.groundWater;
+                }
+                if(b instanceof GenericCrafter gc && gc.outputItem.item == Items.sporePod){
+                    gc.envRequired |= Env.spores;
+                }
             });
         });
     }
