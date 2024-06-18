@@ -15,6 +15,7 @@ import mindustry.world.meta.*;
 import overblocks.content.*;
 import overblocks.gen.*;
 
+@SuppressWarnings("unused")
 public class OverblocksMod extends Mod{
 
     public OverblocksMod(){
