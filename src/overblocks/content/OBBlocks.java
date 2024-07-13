@@ -166,6 +166,7 @@ public class OBBlocks {
                 incendChance = 0.7f;
                 incendSpread = 5f;
                 incendAmount = 1;
+                pierceArmor = true;
                 status = StatusEffects.burning;
             }};
             scaledHealth = 200;
