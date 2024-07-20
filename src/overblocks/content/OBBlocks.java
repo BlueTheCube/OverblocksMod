@@ -19,7 +19,7 @@ import static mindustry.type.ItemStack.*;
 public class OBBlocks {
     public static Block
             //enviroment
-            hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, ceriseBoulder,
+            hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, ceriseBoulder,
             //other
             plastaniumCrusher, plastaniumDeflectWall, devastation;
 
@@ -83,6 +83,20 @@ public class OBBlocks {
             emitLight = true;
             lightRadius = 30f;
             lightColor = Color.orange.cpy().a(0.38f);
+        }};
+
+        sunkenCoreZone = new Floor("sunken-core-zone"){{
+            speedMultiplier = 0.8f;
+            statusDuration = 50f;
+            albedo = 0.9f;
+            supportsOverlay = true;
+
+            status = StatusEffects.wet;
+            cacheLayer = CacheLayer.water;
+            isLiquid = true;
+            liquidDrop = Liquids.water;
+            variants = 0;
+            allowCorePlacement = true;
         }};
 
         carbonPebbles = new OverlayFloor("carbon-pebbles");
