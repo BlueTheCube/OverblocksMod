@@ -28,16 +28,6 @@ public class OverblocksMod extends Mod{
             });
         });
 
-        Events.on(ContentInitEvent.class, e ->{
-            Vars.content.blocks().each(b -> {
-                if(b instanceof SolidPump sp && sp.result == Liquids.water){
-                    sp.envRequired |= Env.groundWater;
-                }
-                if(b instanceof AttributeCrafter gc && gc.outputItem.item == Items.sporePod){
-                    gc.envRequired |= Env.spores;
-                }
-            });
-        });
     }
     @Override
     public void loadContent(){
