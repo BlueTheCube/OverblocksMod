@@ -19,7 +19,8 @@ import static mindustry.type.ItemStack.*;
 public class OBBlocks {
     public static Block
             //enviroment
-            hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent, ceriseVent, ceriseStoneWall, ceriseBoulder,
+            hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
+            redIceVent, ceriseVent, ceriseStoneWall, ceriseBoulder,
             //other
             plastaniumCrusher, plastaniumDeflectWall, devastation;
 
@@ -103,6 +104,11 @@ public class OBBlocks {
 
         beryllicVent = new SteamVent("beryllic-vent"){{
             parent = blendGroup = Blocks.beryllicStone;
+            attributes.set(Attribute.steam, 1f);
+        }};
+
+        redIceVent = new SteamVent("red-ice-vent"){{
+            parent = blendGroup = Blocks.redIce;
             attributes.set(Attribute.steam, 1f);
         }};
 
