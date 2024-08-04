@@ -132,6 +132,7 @@ public class OBBlocks {
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
             requirements(Category.crafting, with(Items.silicon, 120, Items.metaglass, 150, Items.graphite, 100, Items.titanium, 100, Items.plastanium, 30));
             hasItems = true;
+            itemCapacity = 15;
             liquidCapacity = 60f;
             craftTime = 60f * 1.5f;
             outputItem = new ItemStack(Items.plastanium, 4);
