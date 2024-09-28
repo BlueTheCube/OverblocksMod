@@ -20,7 +20,7 @@ public class OBBlocks {
     public static Block
             //enviroment
             hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
-            redIceVent, ceriseVent, ceriseStoneWall, ceriseBoulder,
+            redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
             //other
             plastaniumCrusher, plastaniumDeflectWall, devastation;
 
@@ -123,6 +123,11 @@ public class OBBlocks {
         }};
         Blocks.crystallineStoneWall.attributes.set(Attribute.sand, 0.7f);
         Blocks.arkyicWall.attributes.set(Attribute.sand, 1.1f);
+
+        redGraphiticWall = new StaticWall("red-graphitic-wall"){{
+            itemDrop = Items.graphite;
+            variants = 3;
+        }};
 
         ceriseBoulder = new Prop("cerise-boulder"){{
             variants = 2;
