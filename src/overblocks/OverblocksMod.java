@@ -33,6 +33,7 @@ public class OverblocksMod extends Mod{
     @Override
     public void loadContent(){
         EntityRegistry.register();
+        OBStatusEffects.load();
         OBItems.load();
         OBBlocks.load();
         loadOther();
