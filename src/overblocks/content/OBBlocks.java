@@ -183,17 +183,16 @@ public class OBBlocks {
             recoil = 3.5f;
             size = 4;
             reload = 300f;
-            shake = 2f;
+            shake = 7f;
             moveWhileCharging = false;
-            smokeEffect = Fx.none;
-            shootType = new LaserBulletType(450){{
+            shootType = new LaserBulletType(500){{
                 length = 360f;
                 width = 45f;
 
                 lifetime = 65f;
-
+                lightColor = lightningColor =  Pal.powerLight;
                 largeHit = true;
-                hitSize = 4;
+                hitSize = 5;
                 chargeEffect = OBFx.orangeLaserCharge;
 
                 sideAngle = 15f;
@@ -208,7 +207,7 @@ public class OBBlocks {
             }};
             scaledHealth = 200;
             coolant = consumeCoolant(0.5f);
-            consumePower(13f);
+            consumePower(11f);
         }};
     }
 }
