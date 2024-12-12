@@ -166,7 +166,7 @@ project(":"){
         from(zipTree(desktopJar), zipTree(dexJar))
         doFirst{
             logger.lifecycle("Running `d8`.")
-            roviders.exec{
+            providers.exec{
                 // Find Android SDK root.
                 val sdkRoot = File(
                     OS.env("ANDROID_SDK_ROOT") ?: OS.env("ANDROID_HOME") ?:
