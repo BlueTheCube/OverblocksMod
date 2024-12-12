@@ -9,6 +9,7 @@ import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.environment.*;
+import mindustry.world.blocks.payloads.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
@@ -22,7 +23,7 @@ public class OBBlocks {
             hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
             redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
             //other
-            plastaniumCrusher, plastaniumDeflectWall, devastation;
+            payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall, devastation;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -132,6 +133,16 @@ public class OBBlocks {
         ceriseBoulder = new Prop("cerise-boulder"){{
             variants = 2;
             ceriseStone.asFloor().decoration = this;
+        }};
+
+        payloadPropulsionTower = new PayloadMassDriver("payload-propulsion-tower"){{
+            requirements(Category.units, with(Items.thorium, 300, Items.silicon, 200, Items.plastanium, 200, Items.phaseFabric, 50));
+            size = 5;
+            reload = 130f;
+            chargeTime = 100f;
+            range = 1000f;
+            maxPayloadSize = 3.5f;
+            consumePower(6f);
         }};
 
         plastaniumCrusher = new GenericCrafter("plastanium-crusher"){{
