@@ -22,10 +22,10 @@ public class OverblocksMod extends Mod{
     public OverblocksMod(){
         Events.on(ClientLoadEvent.class, e -> {
             Time.runTask(10f, () -> {
-                OBBlocks.hotCarbonStone.asFloor().mapColor = Color.valueOf("5f433d");
-                OBBlocks.magmaCarbonStone.asFloor().mapColor = Color.valueOf("855443");
-                OBBlocks.shallowSlag.asFloor().mapColor = Color.valueOf("cc5035");
-                OBBlocks.ceriseStoneWall.mapColor = Color.valueOf("DB959F");
+                assignColor(OBBlocks.hotCarbonStone, Color.valueOf("5f433d"));
+                assignColor(OBBlocks.magmaCarbonStone, Color.valueOf("855443"));
+                assignColor(OBBlocks.shallowSlag, Color.valueOf("cc5035"));
+                assignColor(OBBlocks.ceriseStoneWall, Color.valueOf("DB959F"));
             });
         });
 
@@ -41,5 +41,11 @@ public class OverblocksMod extends Mod{
 
     public void loadOther(){
         Blocks.sporeMoss.asFloor().blendGroup = Blocks.moss;
+    }
+
+    public void assignColor(Block block, Color color){
+        if(block != null && color != null){
+            block.mapColor = color;
+        }
     }
 }
