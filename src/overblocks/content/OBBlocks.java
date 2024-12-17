@@ -23,7 +23,7 @@ public class OBBlocks {
             hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
             redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
             //other
-            payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall, devastation;
+            payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall, vampirism, devastation;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
@@ -172,6 +172,39 @@ public class OBBlocks {
             insulated = true;
             absorbLasers = true;
             envDisabled |= Env.scorching;
+        }};
+
+        vampirism = new ItemTurret("vampirism"){{
+            requirements(Category.turret, with(Items.lead, 100, Items.silicon, 70, Items.titanium, 80));
+            ammo(
+                Items.lead, new SapBulletType(){{
+                    sapStrength = 0.5f;
+                    length = 40f;
+                    damage = 23;
+                    shootEffect = Fx.shootSmall;
+                    hitColor = color = Color.valueOf("bf92f9");
+                    despawnEffect = Fx.none;
+                    width = 0.54f;
+                    lifetime = 35f;
+                    knockback = -1.24f;
+                }},
+                Items.graphite, new SapBulletType(){{
+                    sapStrength = 0.8f;
+                    length = 75f;
+                    damage = 40;
+                    shootEffect = Fx.shootSmall;
+                    hitColor = color = Color.valueOf("b2c6d2");
+                    despawnEffect = Fx.none;
+                    width = 1f;
+                    lifetime = 35f;
+                    knockback = -1.24f;
+                    reloadMultiplier = 0.6f;
+                }}
+            );
+            shootY = 4f;
+            reload = 14f;
+            recoil = 2f;
+            shootSound = Sounds.sap;
         }};
 
         devastation = new PowerTurret("devastation"){{
