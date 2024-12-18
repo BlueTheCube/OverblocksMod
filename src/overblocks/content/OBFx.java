@@ -6,6 +6,7 @@ import arc.math.*;
 import arc.math.geom.*;
 import mindustry.entities.*;
 import mindustry.graphics.*;
+import overblocks.graphics.*;
 
 import static arc.graphics.g2d.Draw.color;
 import static arc.graphics.g2d.Lines.stroke;
@@ -33,11 +34,11 @@ public class OBFx {
         Drawf.light(e.x, e.y, e.fin() * 20f, Color.valueOf("ec7458aa"), 0.7f);
     }).followParent(true).rotWithParent(true),
 
-    unluckyBurn = new Effect(35f, e -> {
-        color(Color.valueOf("8f85ff"), Color.valueOf("210794"), e.fin());
+    redRusting = new Effect(40f, e -> {
+        color(OBPal.redRust);
 
-        randLenVectors(e.id, 3, 2f + e.fin() * 7f, (x, y) -> {
-            Fill.circle(e.x + x, e.y + y, 0.1f + e.fout() * 1.4f);
+        randLenVectors(e.id, 2, 1f + e.fin() * 2f, (x, y) -> {
+            Fill.circle(e.x + x, e.y + y, e.fout() * 1.2f);
         });
     });
 }

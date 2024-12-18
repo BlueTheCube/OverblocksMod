@@ -4,30 +4,20 @@ import arc.graphics.*;
 import arc.math.*;
 import mindustry.content.*;
 import mindustry.type.*;
+import overblocks.type.*;
 
 public class OBStatusEffects {
-    public static StatusEffect unluckyBurn;
+    public static StatusEffect redRust;
     public static void load(){
-        unluckyBurn = new StatusEffect("unlucky-burn"){{
+        redRust = new OBStatusEffect("red-rust"){{
             color = Color.valueOf("8f85ff");
             hideDetails = false;
             damage = 0.21f;
-            damageMultiplier = 0.9f;
-            effect = OBFx.unluckyBurn;
+            healthMultiplier = 0.85f;
+            reloadMultiplier = 0.85f;
+            speedMultiplier = 0.75f;
+            effect = OBFx.redRusting;
             transitionDamage = 8f;
-
-            init(() -> {
-                affinity(StatusEffects.tarred, (unit, result, time) -> {
-                    unit.damagePierce(transitionDamage);
-                    OBFx.unluckyBurn.at(unit.x + Mathf.range(unit.bounds() / 2f), unit.y + Mathf.range(unit.bounds() / 2f));
-                    result.set(unluckyBurn, Math.min(time + result.time, 300f));
-                });
-                affinity(StatusEffects.wet, (unit, result, time) -> {
-                    unit.damagePierce(transitionDamage);
-                    OBFx.unluckyBurn.at(unit.x + Mathf.range(unit.bounds() / 2f), unit.y + Mathf.range(unit.bounds() / 2f));
-                    result.set(unluckyBurn, Math.min(time + result.time, 300f));
-                });
-            });
         }};
     }
 }

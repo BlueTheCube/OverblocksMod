@@ -13,6 +13,7 @@ import mindustry.world.blocks.payloads.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
+import overblocks.graphics.*;
 import overblocks.world.blocks.*;
 
 import static mindustry.type.ItemStack.*;
@@ -193,7 +194,7 @@ public class OBBlocks {
                     length = 75f;
                     damage = 40;
                     shootEffect = Fx.shootSmall;
-                    hitColor = color = Color.valueOf("b2c6d2");
+                    hitColor = color = OBPal.graphitic;
                     despawnEffect = Fx.none;
                     width = 1f;
                     lifetime = 35f;
