@@ -221,7 +221,7 @@ public class OBBlocks {
             shake = 7f;
             moveWhileCharging = false;
             shootType = new LaserBulletType(500){{
-                length = 360f;
+                length = range;
                 width = 40f;
 
                 lifetime = 65f;
@@ -240,7 +240,6 @@ public class OBBlocks {
                 pierceArmor = true;
                 status = StatusEffects.burning;
             }};
-            shoot = new ShootSpread(3, 15f);
             scaledHealth = 200;
             coolant = consumeCoolant(0.5f);
             consumePower(11f);
