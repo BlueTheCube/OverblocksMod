@@ -3,6 +3,7 @@ package overblocks.content;
 import arc.graphics.*;
 import mindustry.content.*;
 import mindustry.entities.bullet.*;
+import mindustry.entities.pattern.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.type.*;
@@ -216,15 +217,15 @@ public class OBBlocks {
             shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
             recoil = 3.5f;
             size = 4;
-            reload = 300f;
+            reload = 350f;
             shake = 7f;
             moveWhileCharging = false;
             shootType = new LaserBulletType(500){{
                 length = 360f;
-                width = 45f;
+                width = 40f;
 
                 lifetime = 65f;
-                lightColor = lightningColor =  Pal.powerLight;
+                lightColor = lightningColor = Pal.powerLight;
                 largeHit = true;
                 hitSize = 5;
                 chargeEffect = OBFx.orangeLaserCharge;
@@ -239,6 +240,7 @@ public class OBBlocks {
                 pierceArmor = true;
                 status = StatusEffects.burning;
             }};
+            shoot = new ShootSpread(3, 15f);
             scaledHealth = 200;
             coolant = consumeCoolant(0.5f);
             consumePower(11f);
