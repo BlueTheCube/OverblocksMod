@@ -214,13 +214,14 @@ public class OBBlocks {
             range = 360f;
             shootSound = Sounds.laserblast;
             chargeSound = Sounds.lasercharge;
+            shoot = new ShootSpread(3, 15f);
             shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
             recoil = 3.5f;
             size = 4;
-            reload = 350f;
+            reload = 420f;
             shake = 7f;
             moveWhileCharging = false;
-            shootType = new LaserBulletType(500){{
+            shootType = new LaserBulletType(200){{
                 length = range;
                 width = 40f;
 
