@@ -211,19 +211,25 @@ public class OBBlocks {
 
         devastation = new PowerTurret("devastation"){{
             requirements(Category.turret, with(Items.titanium, 750, Items.lead, 350, Items.metaglass, 250, Items.surgeAlloy, 325, Items.silicon, 275));
-            range = 360f;
-            shootSound = Sounds.laserblast;
-            chargeSound = Sounds.lasercharge;
-            shoot = new ShootSpread(3, 15f);
-            shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
             recoil = 3.5f;
-            size = 4;
             reload = 420f;
             shake = 7f;
+            range = 380f;
+
+            shoot = new ShootSpread(3, 15f);
+            shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
+
+            shootSound = Sounds.laserblast;
+            chargeSound = Sounds.lasercharge;
+            scaledHealth = 200;
+            size = 4;
             moveWhileCharging = false;
+
+            float brange = range + 10f;
+
             shootType = new LaserBulletType(200){{
-                length = range;
-                width = 40f;
+                length = brange;
+                width = 50f;
 
                 lifetime = 65f;
                 lightColor = lightningColor = Pal.powerLight;
@@ -241,7 +247,6 @@ public class OBBlocks {
                 pierceArmor = true;
                 status = StatusEffects.burning;
             }};
-            scaledHealth = 200;
             coolant = consumeCoolant(0.5f);
             consumePower(11f);
         }};
