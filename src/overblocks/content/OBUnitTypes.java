@@ -17,6 +17,7 @@ public class OBUnitTypes {
 
     public static void load(){
         relayer = new OBUnitType("relayer", DodgeMechUnit.class){{
+            dodge = 1f / 3;
             speed = 0.5f;
             hitSize = 8f;
             health = 150;

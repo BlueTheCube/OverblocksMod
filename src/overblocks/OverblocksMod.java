@@ -35,6 +35,7 @@ public class OverblocksMod extends Mod{
         EntityRegistry.register();
         OBStatusEffects.load();
         OBItems.load();
+        OBUnitTypes.load();
         OBBlocks.load();
         loadOther();
     }
