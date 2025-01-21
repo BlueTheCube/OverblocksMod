@@ -6,7 +6,11 @@ import mindustry.gen.*;
 import mindustry.type.*;
 
 public class OBUnitType extends UnitType{
+
     public @Nullable StatusEffect alwaysStatus;
+
+    public float dodge = 0f;
+
     public OBUnitType(String name){
         super(name);
     }
