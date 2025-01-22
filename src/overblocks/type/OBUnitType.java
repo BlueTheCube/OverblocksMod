@@ -24,7 +24,9 @@ public class OBUnitType extends UnitType {
     @Override
     public void setStats() {
         super.setStats();
-        stats.add(OBStats.dodge, Mathf.round(dodge * 100) + "%");
+        if (dodge > 0){
+            stats.add(OBStats.dodge, Mathf.round(dodge * 100) + "%");
+        }
     }
 
     @Override
