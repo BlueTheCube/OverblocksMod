@@ -229,7 +229,7 @@ public class OBBlocks {
 
             float brange = range + 10f;
 
-            shootType = new LaserBulletType(200){{
+            shootType = new LaserBulletType(300){{
                 length = brange;
                 width = 50f;
 
@@ -249,7 +249,9 @@ public class OBBlocks {
                 pierceArmor = true;
                 status = StatusEffects.burning;
             }};
-            coolant = consumeCoolant(0.5f);
+            coolantMultiplier = 0.5f;
+            coolant = consumeCoolant(0.9f);
+
             consumePower(11f);
         }};
     }
