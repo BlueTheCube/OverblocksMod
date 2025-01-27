@@ -13,7 +13,18 @@ import static ent.anno.Annotations.EntityDef;
 
 public class OBUnitTypes {
 
+    //dodger unit
     public static @EntityDef({Unitc.class, Mechc.class, Dodgec.class}) UnitType relayer;
+
+    //mr. boomerang unit?
+
+    //radial damage unit?
+
+    //steam-based unit?
+
+    //obsidian unit?
+
+    //anuke echdeath?
 
     public static void load(){
         relayer = new OBUnitType("relayer", DodgeMechUnit.class){{
