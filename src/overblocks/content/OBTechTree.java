@@ -11,7 +11,7 @@ import mindustry.type.*;
 import static mindustry.content.Blocks.*;
 import static overblocks.content.OBBlocks.*;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "CodeBlock2Expr"})
 public class OBTechTree {
     static TechTree.TechNode context = null;
 
@@ -59,7 +59,6 @@ public class OBTechTree {
     /** Moves a node from its parent to the context node. */
     private static void rebaseNode(String tree, Content next){
         TechNode oldNode = findNode(TechTree.roots.find(r -> r.name.equals(tree)), n -> n.content == next);
-        assert oldNode != null;
         oldNode.parent.children.remove(oldNode);
         context.children.add(oldNode);
         oldNode.parent = context;
