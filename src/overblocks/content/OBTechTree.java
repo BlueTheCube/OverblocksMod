@@ -59,6 +59,7 @@ public class OBTechTree {
     /** Moves a node from its parent to the context node. */
     private static void rebaseNode(String tree, Content next){
         TechNode oldNode = findNode(TechTree.roots.find(r -> r.name.equals(tree)), n -> n.content == next);
+        assert oldNode != null;
         oldNode.parent.children.remove(oldNode);
         context.children.add(oldNode);
         oldNode.parent = context;
@@ -68,14 +69,14 @@ public class OBTechTree {
             ItemStack[] req = ItemStack.copy(oldNode.requirements);
             if(oldNode.researchCostMultipliers.size > 0){
                 for(ItemStack itemStack : req){
-                    itemStack.amount /= oldNode.researchCostMultipliers.get(itemStack.item, 1f);
+                    itemStack.amount /= (int) oldNode.researchCostMultipliers.get(itemStack.item, 1f);
                 }
             }
 
             //Apply new multipliers
             if(context.researchCostMultipliers.size > 0){
                 for(ItemStack itemStack : req){
-                    itemStack.amount *= context.researchCostMultipliers.get(itemStack.item, 1f);
+                    itemStack.amount *= (int) context.researchCostMultipliers.get(itemStack.item, 1f);
                 }
             }
             oldNode.requirements = req;
