@@ -37,6 +37,7 @@ public class OverblocksMod extends Mod{
         OBItems.load();
         OBUnitTypes.load();
         OBBlocks.load();
+        OBTechTree.load();
         loadOther();
     }
 

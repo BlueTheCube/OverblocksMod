@@ -211,6 +211,7 @@ public class OBBlocks {
             reload = 14f;
             recoil = 2f;
             shootSound = Sounds.sap;
+            coolant = consumeCoolant(0.9f);
         }};
 
         devastation = new PowerTurret("devastation"){{
