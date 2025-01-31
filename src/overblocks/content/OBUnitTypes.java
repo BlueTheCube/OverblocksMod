@@ -12,6 +12,7 @@ import overblocks.type.*;
 import static ent.anno.Annotations.EntityDef;
 
 public class OBUnitTypes {
+    //vanilla entities units
 
     //dodger unit
     public static @EntityDef({Unitc.class, Mechc.class, Dodgec.class}) UnitType relayer;
@@ -22,16 +23,12 @@ public class OBUnitTypes {
 
     //steam-based unit?
 
-    //obsidian unit?
-
-    //anuke echdeath?
-
     public static void load(){
         relayer = new OBUnitType("relayer", DodgeMechUnit.class){{
-            dodge = 1f / 3;
+            dodge = 0.75f;
             speed = 0.5f;
             hitSize = 8f;
-            health = 150;
+            health = 100;
             weapons.add(new Weapon("large-weapon"){{
                 reload = 13f;
                 x = 4f;

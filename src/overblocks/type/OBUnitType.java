@@ -9,8 +9,10 @@ import overblocks.gen.*;
 
 public class OBUnitType extends UnitType {
 
+    /** always status*/
     public @Nullable StatusEffect alwaysStatus;
 
+    /** dodge chance, only for {@link overblocks.gen.Dodgec} units*/
     public float dodge = 0f;
 
     @SuppressWarnings("unchecked")

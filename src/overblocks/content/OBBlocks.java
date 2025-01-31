@@ -21,11 +21,13 @@ import static mindustry.type.ItemStack.*;
 
 public class OBBlocks {
     public static Block
-            //enviroment
-            hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
-            redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
-            //other
-            payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall, vampirism, devastation;
+    //enviroment
+    hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
+    redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
+    //other
+    payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall,
+    //turrets
+    vampirism, devastation;
 
     public static void load(){
         hotCarbonStone = new Floor("hotcarbon-stone"){{
