@@ -18,13 +18,13 @@ public class OBStatusEffect extends StatusEffect {
 
     @Override
     public void setStats(){
-        if(damagePercentage > 0) stats.addPercent(OBStats.damagePercent, damagePercentage / 100);
+        if(damagePercentage > 0) stats.addPercent(OBStats.damagePercent, damagePercentage * 100);
     }
 
     @Override
     public void update(Unit unit, float time){
-        if (damagePercentage > 0){
-            unit.damageContinuousPierce(damagePercentage / unit.maxHealth());
+        if (damagePercentage > 0) {
+            unit.damageContinuousPierce(damagePercentage * unit.maxHealth());
         }
     }
 
