@@ -15,7 +15,7 @@ public class OBStatusEffects {
         redRust = new OBStatusEffect("red-rust"){{
             color = OBPal.redRust;
             hideDetails = false;
-            damage = 0.21f;
+            damagePercentage = 15f;
             healthMultiplier = 0.85f;
             reloadMultiplier = 0.85f;
             speedMultiplier = 0.75f;
