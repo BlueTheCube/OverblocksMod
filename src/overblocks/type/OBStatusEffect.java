@@ -18,7 +18,7 @@ public class OBStatusEffect extends StatusEffect {
 
     @Override
     public void setStats(){
-        if(damagePercentage > 0) stats.addPercent(OBStats.damagePercent, damagePercentage * 100);
+        if(damagePercentage > 0) stats.addPercent(OBStats.damagePercent, damagePercentage);
     }
 
     @Override
