@@ -6,7 +6,7 @@ import mindustry.type.*;
 import overblocks.graphics.*;
 
 public class OBStatusEffect extends StatusEffect {
-    public Color outlineColor = Pal.darkerMetal;
+    public Color outlineColor = Pal.gray;
     public int outlineThickness = 3;
     public OBStatusEffect(String name) {
         super(name);
