@@ -4,13 +4,16 @@ import arc.graphics.*;
 import arc.math.*;
 import mindustry.content.*;
 import mindustry.type.*;
+import overblocks.graphics.*;
 import overblocks.type.*;
 
 public class OBStatusEffects {
+
     public static StatusEffect redRust;
+
     public static void load(){
         redRust = new OBStatusEffect("red-rust"){{
-            color = Color.valueOf("8f85ff");
+            color = OBPal.redRust;
             hideDetails = false;
             damage = 0.21f;
             healthMultiplier = 0.85f;
