@@ -24,7 +24,7 @@ public class OBStatusEffect extends StatusEffect {
     @Override
     public void update(Unit unit, float time){
         if (damagePercentage > 0) {
-            unit.damageContinuousPierce(damagePercentage * unit.maxHealth());
+            unit.damageContinuousPierce(unit.maxHealth * damagePercentage / 100);
         }
     }
 
