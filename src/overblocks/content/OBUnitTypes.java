@@ -1,11 +1,14 @@
 package overblocks.content;
 
+import arc.graphics.*;
 import ent.anno.*;
 import mindustry.content.*;
 import mindustry.entities.bullet.*;
 import mindustry.gen.*;
 import mindustry.gen.MechUnit;
+import mindustry.graphics.*;
 import mindustry.type.*;
+import mindustry.type.ammo.*;
 import overblocks.gen.*;
 import overblocks.type.*;
 
@@ -29,16 +32,24 @@ public class OBUnitTypes {
             speed = 0.5f;
             hitSize = 8f;
             health = 100;
-            weapons.add(new Weapon("large-weapon"){{
-                reload = 13f;
-                x = 4f;
-                y = 2f;
+            ammoType = new PowerAmmoType(1000);
+
+            weapons.add(new Weapon("relayer-weapon"){{
                 top = false;
-                ejectEffect = Fx.casing1;
-                bullet = new BasicBulletType(2.5f, 9){{
+                shootY = 2f;
+                reload = 36f;
+                x = 4.5f;
+                alternate = false;
+                ejectEffect = Fx.none;
+                recoil = 2f;
+                shootSound = Sounds.lasershoot;
+
+                bullet = new LaserBoltBulletType(2.5f, 12){{
                     width = 7f;
                     height = 9f;
-                    lifetime = 60f;
+                    lifetime = 90f;
+                    backColor = Pal.lancerLaser;
+                    frontColor = Color.white;
                 }};
             }});
         }};
