@@ -34,7 +34,7 @@ public class OBUnitTypes {
             health = 100;
             ammoType = new PowerAmmoType(1000);
 
-            weapons.add(new Weapon("relayer-weapon"){{
+            weapons.add(new Weapon("overblocks-relayer-weapon"){{
                 top = false;
                 shootY = 2f;
                 reload = 36f;
