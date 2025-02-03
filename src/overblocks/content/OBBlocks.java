@@ -229,11 +229,10 @@ public class OBBlocks {
             );
             size = 2;
             range = 70f;
-            shootY = 4f;
             reload = 21f;
             recoil = 2f;
             shootSound = Sounds.sap;
-            shootY = 7f;
+            shootY = 12f;
             coolant = consumeCoolant(0.1f);
         }};
 
