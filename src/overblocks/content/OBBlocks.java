@@ -22,7 +22,7 @@ import static mindustry.type.ItemStack.*;
 public class OBBlocks {
     public static Block
     //enviroment
-    hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
+    hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, redIceStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
     redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
     //other
     payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall,
@@ -72,6 +72,15 @@ public class OBBlocks {
         Blocks.redStone.asFloor().attributes.set(Attribute.water, -0.1f);
         Blocks.denseRedStone.asFloor().attributes.set(Attribute.water, -0.1f);
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
+
+        redIceStone = new Floor("red-ice-stone"){{
+            dragMultiplier = 0.6f;
+            variants = 3;
+            attributes.set(Attribute.water, 0.3f);
+            albedo = 0.6f;
+            decoration = Blocks.redIceBoulder;
+            wall = Blocks.redIceWall;
+        }};
 
         shallowSlag = new Floor("shallow-slag"){{
             hasColor = true;
