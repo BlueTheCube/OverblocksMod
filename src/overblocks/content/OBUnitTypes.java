@@ -45,10 +45,12 @@ public class OBUnitTypes {
                 shootSound = Sounds.lasershoot;
 
                 bullet = new LaserBoltBulletType(2.5f, 12){{
-                    width = 7f;
-                    height = 9f;
+                    smokeEffect = Fx.hitLaser;
+                    hitEffect = Fx.hitLaser;
+                    despawnEffect = Fx.hitLaser;
+
                     lifetime = 90f;
-                    backColor = Pal.lancerLaser;
+                    backColor = lightColor = Pal.lancerLaser;
                     frontColor = Color.white;
                 }};
             }});
