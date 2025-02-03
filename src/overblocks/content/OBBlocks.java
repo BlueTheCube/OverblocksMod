@@ -191,7 +191,7 @@ public class OBBlocks {
             requirements(Category.turret, with(Items.lead, 100, Items.silicon, 70, Items.titanium, 80));
             ammo(
                 Items.lead, new SapBulletType(){{
-                    sapStrength = 0.5f;
+                    sapStrength = 0.3f;
                     length = 70f;
                     damage = 23;
                     shootEffect = Fx.shootSmall;
@@ -202,7 +202,7 @@ public class OBBlocks {
                     knockback = -1.24f;
                 }},
                 Items.graphite, new SapBulletType(){{
-                    sapStrength = 0.8f;
+                    sapStrength = 0.6f;
                     length = 70f;
                     damage = 60;
                     shootEffect = Fx.shootSmall;
@@ -212,15 +212,28 @@ public class OBBlocks {
                     lifetime = 35f;
                     knockback = -1.24f;
                     reloadMultiplier = 0.6f;
-                }}
+                }},
+                Items.thorium, new SapBulletType(){{
+                    sapStrength = 0.8f;
+                    length = 120f;
+                    damage = 120;
+                    rangeChange = 50f;
+                    shootEffect = Fx.shootSmall;
+                    hitColor = color = Items.thorium.color;
+                    despawnEffect = Fx.none;
+                    width = 1f;
+                    lifetime = 35f;
+                    knockback = -2f;
+                    reloadMultiplier = 0.1f;
+                 }}
             );
             size = 2;
             range = 70f;
             shootY = 4f;
-            reload = 14f;
+            reload = 21f;
             recoil = 2f;
             shootSound = Sounds.sap;
-            coolant = consumeCoolant(0.9f);
+            coolant = consumeCoolant(0.1f);
         }};
 
         devastation = new PowerTurret("devastation"){{
@@ -261,8 +274,8 @@ public class OBBlocks {
                 pierceArmor = true;
                 status = StatusEffects.burning;
             }};
-            coolantMultiplier = 0.5f;
-            coolant = consumeCoolant(0.9f);
+            coolantMultiplier = 0.6f;
+            coolant = consumeCoolant(0.8f);
 
             consumePower(11f);
         }};
