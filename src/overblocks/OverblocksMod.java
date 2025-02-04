@@ -19,14 +19,12 @@ import overblocks.graphics.*;
 public class OverblocksMod extends Mod{
 
     public OverblocksMod(){
-        Events.on(ClientLoadEvent.class, e -> {
-            Time.runTask(10f, () -> {
-                assignColor(OBBlocks.hotCarbonStone, Color.valueOf("5f433d"));
-                assignColor(OBBlocks.magmaCarbonStone, Color.valueOf("855443"));
-                assignColor(OBBlocks.shallowSlag, Color.valueOf("cc5035"));
-                assignColor(OBBlocks.ceriseStoneWall, Color.valueOf("DB959F"));
-            });
-        });
+        Events.on(ClientLoadEvent.class, e -> Time.runTask(10f, () -> {
+            assignColor(OBBlocks.hotCarbonStone, Color.valueOf("5f433d"));
+            assignColor(OBBlocks.magmaCarbonStone, Color.valueOf("855443"));
+            assignColor(OBBlocks.shallowSlag, Color.valueOf("cc5035"));
+            assignColor(OBBlocks.ceriseStoneWall, Color.valueOf("DB959F"));
+        }));
 
     }
     @Override
