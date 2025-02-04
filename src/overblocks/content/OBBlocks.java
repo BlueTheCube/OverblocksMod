@@ -69,9 +69,6 @@ public class OBBlocks {
             variants = 3;
         }};
         ceriseStone = new Floor("cerise-stone");
-        Blocks.redStone.asFloor().attributes.set(Attribute.water, -0.1f);
-        Blocks.denseRedStone.asFloor().attributes.set(Attribute.water, -0.1f);
-        Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
         redIceStone = new Floor("red-ice-stone"){{
             dragMultiplier = 0.6f;
@@ -135,8 +132,6 @@ public class OBBlocks {
             ceriseStone.asFloor().wall = this;
             attributes.set(Attribute.sand, 1.1f);
         }};
-        Blocks.crystallineStoneWall.attributes.set(Attribute.sand, 0.7f);
-        Blocks.arkyicWall.attributes.set(Attribute.sand, 1.1f);
 
         redGraphiticWall = new StaticWall("red-graphitic-wall"){{
             itemDrop = Items.graphite;
