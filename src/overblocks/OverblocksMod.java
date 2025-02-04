@@ -53,7 +53,6 @@ public class OverblocksMod extends Mod{
             frontColor = OBPal.dreadRust;
             backColor = OBPal.darkDreadRust;
             status = OBStatusEffects.dreadRust;
-            hitEffect = new MultiEffect(Fx.hitBulletSmall, Fx.fireHit);
             shootEffect = Fx.shootBig;
             pierceCap = 2;
             pierceBuilding = true;
