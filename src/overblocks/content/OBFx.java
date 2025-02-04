@@ -34,8 +34,8 @@ public class OBFx {
         Drawf.light(e.x, e.y, e.fin() * 20f, Color.valueOf("ec7458aa"), 0.7f);
     }).followParent(true).rotWithParent(true),
 
-    redRusting = new Effect(40f, e -> {
-        color(OBPal.redRust);
+    dreadRusting = new Effect(40f, e -> {
+        color(OBPal.dreadRust);
 
         randLenVectors(e.id, 2, 1f + e.fin() * 2f, (x, y) -> {
             Fill.circle(e.x + x, e.y + y, e.fout() * 1.2f);

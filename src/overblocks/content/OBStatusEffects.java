@@ -9,17 +9,17 @@ import overblocks.type.*;
 
 public class OBStatusEffects {
 
-    public static StatusEffect redRust;
+    public static StatusEffect dreadRust;
 
     public static void load(){
-        redRust = new OBStatusEffect("red-rust"){{
-            color = OBPal.redRust;
+        dreadRust = new OBStatusEffect("dread-rust"){{
+            color = OBPal.dreadRust;
             hideDetails = false;
             damagePercentage = 0.06f;
             healthMultiplier = 0.85f;
             reloadMultiplier = 0.85f;
             speedMultiplier = 0.75f;
-            effect = OBFx.redRusting;
+            effect = OBFx.dreadRusting;
             transitionDamage = 8f;
         }};
     }
