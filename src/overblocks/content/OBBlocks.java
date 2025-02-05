@@ -246,7 +246,7 @@ public class OBBlocks {
             scaledHealth = 200;
             size = 4;
             moveWhileCharging = false;
-            shootY = -6f;
+            shootY = -2f;
 
             float brange = range + 10f;
 
