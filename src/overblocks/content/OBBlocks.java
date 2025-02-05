@@ -2,6 +2,7 @@ package overblocks.content;
 
 import arc.graphics.*;
 import mindustry.content.*;
+import mindustry.entities.*;
 import mindustry.entities.bullet.*;
 import mindustry.entities.pattern.*;
 import mindustry.gen.*;
@@ -227,7 +228,7 @@ public class OBBlocks {
             reload = 21f;
             recoil = 2f;
             shootSound = Sounds.sap;
-            shootY = 12f;
+            shootY = 9f;
             coolant = consumeCoolant(0.1f);
         }};
 
@@ -250,7 +251,7 @@ public class OBBlocks {
 
             float brange = range + 10f;
 
-            shootType = new LaserBulletType(300){{
+            shootType = new LaserBulletType(430){{
                 length = brange;
                 width = 50f;
 
@@ -270,6 +271,7 @@ public class OBBlocks {
                 pierceArmor = true;
                 status = StatusEffects.burning;
             }};
+            unitSort = UnitSorts.strongest;
             coolantMultiplier = 0.6f;
             coolant = consumeCoolant(0.8f);
 
