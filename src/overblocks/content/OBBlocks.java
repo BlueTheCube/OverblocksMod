@@ -26,7 +26,7 @@ public class OBBlocks {
     hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, redIceStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
     redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
     //other
-    payloadPropulsionTower, plastaniumCrusher, plastaniumDeflectWall,
+    payloadPropulsionTower, plastaniumCrusher, diseaseMixer, plastaniumDeflectWall,
     //turrets
     vampirism, devastation;
 
@@ -172,6 +172,18 @@ public class OBBlocks {
             consumePower(4f);
             consumeItem(Items.titanium, 6);
             consumeItem(Items.coal, 2);
+        }};
+
+        diseaseMixer = new GenericCrafter("disease-mixer"){{
+            requirements(Category.crafting, with(Items.copper, 50, Items.lead, 25, Items.titanium, 20));
+            hasItems = true;
+            hasPower = true;
+            outputItem = new ItemStack(OBItems.diseaseVector, 1);
+
+            size = 2;
+
+            consumePower(0.3f);
+            consumeItems(with(Items.lead, 1, Items.sporePod, 2));
         }};
 
         plastaniumDeflectWall = new ReflectionWall("plastanium-deflect-wall"){{
