@@ -9,6 +9,7 @@ import mindustry.graphics.*;
 import overblocks.graphics.*;
 
 import static arc.graphics.g2d.Draw.color;
+import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
 import static arc.math.Angles.randLenVectors;
 
@@ -39,6 +40,15 @@ public class OBFx {
 
         randLenVectors(e.id, 2, 1f + e.fin() * 2f, (x, y) -> {
             Fill.circle(e.x + x, e.y + y, e.fout() * 1.2f);
+        });
+    }),
+
+    dreadShoot = new Effect(12f, e -> {
+        color(Color.white, OBPal.dreadRust, e.fin());
+        stroke(e.fout() * 1.2f + 0.5f);
+
+        randLenVectors(e.id, 7, 25f * e.finpow(), e.rotation, 50f, (x, y) -> {
+            lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fin() * 5f + 2f);
         });
     });
 }

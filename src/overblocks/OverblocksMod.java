@@ -5,7 +5,6 @@ import arc.graphics.*;
 import arc.util.*;
 import mindustry.content.*;
 import mindustry.entities.bullet.*;
-import mindustry.entities.effect.*;
 import mindustry.game.EventType.*;
 import mindustry.mod.*;
 import mindustry.world.*;
@@ -46,7 +45,7 @@ public class OverblocksMod extends Mod{
         Blocks.denseRedStone.asFloor().attributes.set(Attribute.water, -0.1f);
         Blocks.carbonStone.asFloor().attributes.set(Attribute.water, -0.1f);
 
-        BulletType diseaseSpectreBullet = new BasicBulletType(7f, 70){{
+        BulletType diseaseSpectreBullet = new BasicBulletType(7f, 60){{
             hitSize = 5;
             width = 15f;
             height = 21f;
@@ -54,14 +53,28 @@ public class OverblocksMod extends Mod{
             backColor = OBPal.darkDreadRust;
             status = OBStatusEffects.dreadRust;
             shootEffect = Fx.shootBig;
+            statusDuration = 60;
             pierceCap = 2;
             pierceBuilding = true;
             knockback = 0.6f;
             ammoMultiplier = 3;
         }};
 
+        BulletType diseaseFuseBullet = new ShrapnelBulletType(){{
+            length = 100;
+            damage = 70f;
+            ammoMultiplier = 4f;
+            width = 17f;
+            toColor = OBPal.dreadRust;
+            shootEffect = smokeEffect = OBFx.dreadShoot;
+            statusDuration = 60;
+        }};
+
         ItemTurret spectre = (ItemTurret) Blocks.spectre;
         spectre.ammoTypes.put(OBItems.diseaseVector, diseaseSpectreBullet);
+
+        ItemTurret fuse = (ItemTurret) Blocks.fuse;
+        fuse.ammoTypes.put(OBItems.diseaseVector, diseaseFuseBullet);
     }
 
     public void assignColor(Block block, Color color){
