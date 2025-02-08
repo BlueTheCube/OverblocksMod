@@ -67,6 +67,7 @@ public class OverblocksMod extends Mod{
             width = 17f;
             toColor = OBPal.dreadRust;
             shootEffect = smokeEffect = OBFx.dreadShoot;
+            status = OBStatusEffects.dreadRust;
             statusDuration = 60;
         }};
 
