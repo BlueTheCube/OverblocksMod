@@ -21,6 +21,10 @@ public class OBTechTree {
             node(plastaniumCrusher);
         });
 
+        vanillaNode(pyratiteMixer, () -> {
+            node(diseaseMixer);
+        });
+
         vanillaNode(phaseWall, () -> {
             node(plastaniumDeflectWall, Seq.with(new Research(plastaniumWallLarge)));
         });

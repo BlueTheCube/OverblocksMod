@@ -5,6 +5,7 @@
 * Disease Vector item
 * Rosing Alloy item
 * Plastanium Crusher
+* Dread Mixer
 * Disease vector bullet for Spectre turret
 * Dread rust status effect
 * Dodge unit (Relayer)
@@ -19,7 +20,7 @@
 ## Proposed Content
 * More environment blocks
 * Disease vector bullets for more turrets
-* Crafting blocks for disease vector and rosing alloy
+* Crafting blocks for rosing alloy
 * Shield regen block?
 ## License
 This mod is licensed under [GNU GPL v3](/LICENSE).
