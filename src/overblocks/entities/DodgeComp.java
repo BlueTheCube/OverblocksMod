@@ -12,7 +12,7 @@ import overblocks.type.*;
 import static ent.anno.Annotations.*;
 
 @EntityComponent
-abstract class DodgeComp implements Shieldc {
+abstract class DodgeComp implements Shieldc{
     @Import float armor, healthMultiplier, hitTime;
     @Import static float hitDuration;
     @Import UnitType type;
@@ -41,7 +41,7 @@ abstract class DodgeComp implements Shieldc {
 
     @Override
     @Replace(100)
-    public void damageContinuous(float amount) {
+    public void damageContinuous(float amount){
         damage(damageDodge(amount) * Time.delta, hitTime <= -10 + hitDuration);
     }
 

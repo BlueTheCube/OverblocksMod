@@ -7,7 +7,7 @@ import mindustry.type.*;
 import overblocks.graphics.*;
 import overblocks.type.*;
 
-public class OBStatusEffects {
+public class OBStatusEffects{
 
     public static StatusEffect dreadRust;
 

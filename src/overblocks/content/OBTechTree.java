@@ -14,7 +14,7 @@ import static overblocks.content.OBBlocks.*;
 import static overblocks.content.OBItems.*;
 
 @SuppressWarnings({"unused", "CodeBlock2Expr"})
-public class OBTechTree {
+public class OBTechTree{
     static TechTree.TechNode context = null;
 
     public static void load(){

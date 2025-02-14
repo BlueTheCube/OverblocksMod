@@ -13,10 +13,11 @@ import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
 import static arc.math.Angles.randLenVectors;
 
-public class OBFx {
+public class OBFx{
     public static final Rand rand = new Rand();
     public static final Vec2 temp = new Vec2();
     public static Effect
+
     orangeLaserCharge = new Effect(80f, e -> {
         color(Color.valueOf("ec7458aa"));
         stroke(e.fin() * 2f);

@@ -14,7 +14,7 @@ import overblocks.type.*;
 
 import static ent.anno.Annotations.EntityDef;
 
-public class OBUnitTypes {
+public class OBUnitTypes{
     //vanilla entities units
 
     //dodger unit
@@ -27,6 +27,7 @@ public class OBUnitTypes {
     //steam-based unit?
 
     public static void load(){
+
         relayer = new OBUnitType("relayer", DodgeMechUnit.class){{
             dodge = 0.75f;
             speed = 0.5f;

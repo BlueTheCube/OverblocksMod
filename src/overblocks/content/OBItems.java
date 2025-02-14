@@ -5,7 +5,8 @@ import mindustry.content.*;
 import mindustry.type.*;
 import overblocks.graphics.*;
 
-public class OBItems {
+public class OBItems{
+
     public static Item rosingAlloy, diseaseVector;
 
     public static void load(){

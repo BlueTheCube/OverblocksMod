@@ -6,20 +6,21 @@ import arc.graphics.g2d.*;
 import mindustry.graphics.*;
 
 /** @author xstabux **/
-public class Outliner {
+@SuppressWarnings("unused")
+public class Outliner{
 
     /** @author MEEP of Faith#7277 */
-    public static void outlineRegion(MultiPacker packer, TextureRegion textureRegion, String outputName) {
+    public static void outlineRegion(MultiPacker packer, TextureRegion textureRegion, String outputName){
         outlineRegion(packer, textureRegion, Pal.darkerMetal, outputName, 3);
     }
 
     /** @author MEEP of Faith#7277 */
-    public static void outlineRegion(MultiPacker packer, TextureRegion textureRegion, Color outlineColor, String outputName) {
+    public static void outlineRegion(MultiPacker packer, TextureRegion textureRegion, Color outlineColor, String outputName){
         outlineRegion(packer, textureRegion, outlineColor, outputName, 3);
     }
 
     /** @author MEEP of Faith#7277 */
-    public static void outlineRegion(MultiPacker packer, TextureRegion[] textures, Color outlineColor, String outputName) {
+    public static void outlineRegion(MultiPacker packer, TextureRegion[] textures, Color outlineColor, String outputName){
         outlineRegion(packer, textures, outlineColor, outputName, 4);
     }
 
@@ -28,7 +29,7 @@ public class Outliner {
      *
      * @author MEEP of Faith#7277
      */
-    public static void outlineRegion(MultiPacker packer, TextureRegion[] textures, Color outlineColor, String outputName, int radius) {
+    public static void outlineRegion(MultiPacker packer, TextureRegion[] textures, Color outlineColor, String outputName, int radius){
         for (int i = 0; i < textures.length; i++) {
             outlineRegion(packer, textures[i], outlineColor, outputName + "-" + i, radius);
         }
@@ -47,7 +48,7 @@ public class Outliner {
      * 	The thiccness of the outline, default is 3 or 4
      * @author MEEP of Faith#7277
      */
-    public static void outlineRegion(MultiPacker packer, TextureRegion textureRegion, Color outlineColor, String outputName, int outlineRadius) {
+    public static void outlineRegion(MultiPacker packer, TextureRegion textureRegion, Color outlineColor, String outputName, int outlineRadius){
         if (textureRegion == null) return;
         PixmapRegion region = Core.atlas.getPixmap(textureRegion);
         Pixmap out = Pixmaps.outline(region, outlineColor, outlineRadius);

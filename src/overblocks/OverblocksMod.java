@@ -78,7 +78,7 @@ public class OverblocksMod extends Mod{
         fuse.ammoTypes.put(OBItems.diseaseVector, diseaseFuseBullet);
     }
 
-    public void assignColor(Block block, Color color){
+    public static void assignColor(Block block, Color color){
         if(block != null && color != null){
             block.mapColor = color;
         }

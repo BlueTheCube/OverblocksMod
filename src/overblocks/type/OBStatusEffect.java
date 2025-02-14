@@ -8,7 +8,7 @@ import mindustry.world.meta.*;
 import overblocks.graphics.*;
 import overblocks.world.meta.*;
 
-public class OBStatusEffect extends StatusEffect {
+public class OBStatusEffect extends StatusEffect{
     public Color outlineColor = Pal.gray;
     public int outlineThickness = 3;
     public float damagePercentage;
@@ -31,7 +31,7 @@ public class OBStatusEffect extends StatusEffect {
     }
 
     @Override
-    public void createIcons(MultiPacker packer) {
+    public void createIcons(MultiPacker packer){
         Outliner.outlineRegion(packer, fullIcon, outlineColor, name, outlineThickness);
 
         super.createIcons(packer);

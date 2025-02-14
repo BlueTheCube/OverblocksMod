@@ -20,7 +20,7 @@ import overblocks.world.blocks.*;
 
 import static mindustry.type.ItemStack.*;
 
-public class OBBlocks {
+public class OBBlocks{
     public static Block
     //enviroment
     hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, redIceStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
