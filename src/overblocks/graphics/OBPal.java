@@ -8,4 +8,5 @@ public class OBPal{
     dreadRust = Color.valueOf("FF3F4F"),
     darkDreadRust = Color.valueOf("AA0D64"),
     graphitic = Color.valueOf("b2c6d2");
+
 }

@@ -9,9 +9,15 @@ import overblocks.graphics.*;
 import overblocks.world.meta.*;
 
 public class OBStatusEffect extends StatusEffect{
+    /** Outline colors.*/
     public Color outlineColor = Pal.gray;
+
+    /** Outline thickness.*/
     public int outlineThickness = 3;
+
+    /** Damage percentage.*/
     public float damagePercentage;
+
     public OBStatusEffect(String name) {
         super(name);
     }

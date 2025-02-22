@@ -251,7 +251,7 @@ public class OBBlocks{
             shake = 7f;
             range = 380f;
 
-            shoot = new ShootSpread(3, 15f);
+            shoot = new ShootSpread(3, 7.5f);
             shoot.firstShotDelay = OBFx.orangeLaserCharge.lifetime;
 
             shootSound = Sounds.laserblast;
@@ -263,7 +263,7 @@ public class OBBlocks{
 
             float brange = range + 10f;
 
-            shootType = new LaserBulletType(430){{
+            shootType = new LaserBulletType(400){{
                 length = brange;
                 width = 50f;
 
