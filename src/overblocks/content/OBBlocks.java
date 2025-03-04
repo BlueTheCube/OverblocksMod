@@ -183,7 +183,7 @@ public class OBBlocks{
             size = 2;
 
             consumePower(0.3f);
-            consumeItems(with(Items.lead, 1, Items.sporePod, 2));
+            consumeItems(with(OBItems.diseaseFragments, 1, Items.sporePod, 2));
         }};
 
         plastaniumDeflectWall = new ReflectionWall("plastanium-deflect-wall"){{
