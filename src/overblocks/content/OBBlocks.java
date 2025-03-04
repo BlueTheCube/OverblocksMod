@@ -26,7 +26,7 @@ public class OBBlocks{
     hotCarbonStone, magmaCarbonStone, graphiticFloor, ceriseStone, redIceStone, shallowSlag, sunkenCoreZone, carbonPebbles, beryllicVent,
     redIceVent, ceriseVent, ceriseStoneWall, redGraphiticWall, ceriseBoulder,
     //other
-    payloadPropulsionTower, plastaniumCrusher, diseaseMixer, plastaniumDeflectWall,
+    diseaseMines, payloadPropulsionTower, plastaniumCrusher, diseaseMixer, plastaniumDeflectWall,
     //turrets
     vampirism, devastation;
 
@@ -144,6 +144,20 @@ public class OBBlocks{
             ceriseStone.asFloor().decoration = this;
         }};
 
+        diseaseMines = new GenericCrafter("disease-mines"){{
+            requirements(Category.production, with(Items.copper, 25, Items.lead, 25, Items.silicon, 10));
+            outputItem = new ItemStack(OBItems.diseaseFragments, 1);
+            craftTime = 100;
+            size = 2;
+            hasLiquids = true;
+            hasPower = true;
+            hasItems = true;
+            craftEffect = Fx.none;
+
+            consumePower(130f / 60f);
+            consumeLiquid(Liquids.water, 6f / 60f);
+        }};
+
         payloadPropulsionTower = new PayloadMassDriver("payload-propulsion-tower"){{
             requirements(Category.units, with(Items.thorium, 300, Items.silicon, 200, Items.plastanium, 200, Items.phaseFabric, 50));
             size = 5;
@@ -181,9 +195,10 @@ public class OBBlocks{
             outputItem = new ItemStack(OBItems.diseaseVector, 1);
 
             size = 2;
+            craftTime = 80f;
 
             consumePower(0.3f);
-            consumeItems(with(OBItems.diseaseFragments, 1, Items.sporePod, 2));
+            consumeItems(with(OBItems.diseaseFragments, 5, Items.sporePod, 2));
         }};
 
         plastaniumDeflectWall = new ReflectionWall("plastanium-deflect-wall"){{
