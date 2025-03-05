@@ -17,7 +17,7 @@ abstract class DodgeComp implements Shieldc{
     @Import static float hitDuration;
     @Import UnitType type;
 
-    float damageDodge(float amount){
+    public float damageDodge(float amount){
         return type instanceof OBUnitType ob && Mathf.chance(ob.dodge) ? 0 : amount;
     }
 

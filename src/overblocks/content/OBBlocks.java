@@ -195,7 +195,7 @@ public class OBBlocks{
             outputItem = new ItemStack(OBItems.diseaseVector, 1);
 
             size = 2;
-            craftTime = 80f;
+            craftTime = 40f;
 
             consumePower(0.3f);
             consumeItems(with(OBItems.diseaseFragments, 5, Items.sporePod, 2));

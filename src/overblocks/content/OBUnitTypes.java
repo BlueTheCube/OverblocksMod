@@ -14,11 +14,12 @@ import overblocks.type.*;
 
 import static ent.anno.Annotations.EntityDef;
 
+@SuppressWarnings("unused")
 public class OBUnitTypes{
     //vanilla entities units
 
-    //dodger unit
-    public static @EntityDef({Unitc.class, Mechc.class, Dodgec.class}) UnitType relayer;
+    //relayer tree
+    public static @EntityDef({Unitc.class, Mechc.class, Dodgec.class}) UnitType relayer, announcer, agent, spy, undercover;
 
     //mr. boomerang unit?
 
@@ -29,7 +30,7 @@ public class OBUnitTypes{
     public static void load(){
 
         relayer = new OBUnitType("relayer", DodgeMechUnit.class){{
-            dodge = 0.75f;
+            dodge = 0.5f;
             speed = 0.5f;
             hitSize = 8f;
             health = 100;
