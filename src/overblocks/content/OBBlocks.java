@@ -147,7 +147,7 @@ public class OBBlocks{
         diseaseMines = new GenericCrafter("disease-mines"){{
             requirements(Category.production, with(Items.copper, 25, Items.lead, 25, Items.silicon, 10));
             outputItem = new ItemStack(OBItems.diseaseFragments, 1);
-            craftTime = 100;
+            craftTime = 120;
             size = 2;
             hasLiquids = true;
             hasPower = true;
@@ -195,7 +195,7 @@ public class OBBlocks{
             outputItem = new ItemStack(OBItems.diseaseVector, 1);
 
             size = 2;
-            craftTime = 40f;
+            craftTime = 45f;
 
             consumePower(0.3f);
             consumeItems(with(OBItems.diseaseFragments, 5, Items.sporePod, 2));

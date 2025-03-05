@@ -15,7 +15,7 @@ public class OBStatusEffect extends StatusEffect{
     /** Outline thickness.*/
     public int outlineThickness = 3;
 
-    /** Damage percentage.*/
+    /** Damage percentage. Heals if negative.*/
     public float damagePercentage;
 
     public OBStatusEffect(String name) {
@@ -26,6 +26,7 @@ public class OBStatusEffect extends StatusEffect{
     public void setStats(){
         super.setStats();
         if(damagePercentage > 0) stats.addPercent(OBStats.damagePercent, damagePercentage);
+        if(damagePercentage < 0) stats.addPercent(OBStats.damagePercent, -damagePercentage);
     }
 
     @Override
