@@ -9,9 +9,7 @@ import mindustry.game.Objectives.*;
 import mindustry.type.*;
 
 import static mindustry.content.Blocks.*;
-import static mindustry.content.Items.*;
 import static overblocks.content.OBBlocks.*;
-import static overblocks.content.OBItems.*;
 
 @SuppressWarnings({"unused", "CodeBlock2Expr"})
 public class OBTechTree{
@@ -23,12 +21,14 @@ public class OBTechTree{
             node(plastaniumCrusher);
         });
 
-        vanillaNode(pyratite, () -> {
-            node(diseaseVector);
+        vanillaNode(Items.pyratite, () -> {
+            node(OBItems.diseaseVector);
         });
 
         vanillaNode(pyratiteMixer, () -> {
-            node(diseaseMixer);
+            node(diseaseMines, () -> {
+                node(diseaseMixer);
+            });
         });
 
         vanillaNode(phaseWall, () -> {

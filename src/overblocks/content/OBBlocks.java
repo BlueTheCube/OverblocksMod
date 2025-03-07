@@ -149,6 +149,13 @@ public class OBBlocks{
             outputItem = new ItemStack(OBItems.diseaseFragments, 1);
             craftTime = 120;
             size = 2;
+            drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-rotator"){{
+                spinSprite = true;
+                rotateSpeed = 6;
+                layer = Layer.block + 0.2f;
+            }}, new DrawRegion("-top"){{
+                layer = Layer.block + 0.3f;
+            }});
             hasLiquids = true;
             hasPower = true;
             hasItems = true;
