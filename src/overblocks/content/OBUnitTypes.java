@@ -76,11 +76,12 @@ public class OBUnitTypes{
                 top = false;
                 shootSound = Sounds.bolt;
                 shootY = 2f;
-                reload = 11f;
-                x = 4.5f;
+                reload = 18f;
+                x = 8f;
                 recoil = 1f;
                 rotate = true;
                 rotationLimit = 50;
+                rotateSpeed = 1f;
                 shootCone = 60f;
                 ejectEffect = Fx.none;
 
