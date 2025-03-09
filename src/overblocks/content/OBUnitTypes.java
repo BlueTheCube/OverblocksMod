@@ -77,7 +77,7 @@ public class OBUnitTypes{
                 shootSound = Sounds.bolt;
                 shootY = 2f;
                 reload = 18f;
-                x = 8f;
+                x = 7f;
                 recoil = 1f;
                 rotate = true;
                 rotationLimit = 50;

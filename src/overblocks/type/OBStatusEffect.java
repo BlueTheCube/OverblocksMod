@@ -15,7 +15,7 @@ public class OBStatusEffect extends StatusEffect{
     /** Outline thickness.*/
     public int outlineThickness = 3;
 
-    /** Damage percentage. Heals if negative.*/
+    /** Damage percentage per second. Heals if negative.*/
     public float damagePercentage;
 
     public OBStatusEffect(String name) {
