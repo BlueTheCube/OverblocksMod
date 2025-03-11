@@ -1,8 +1,7 @@
-package overblocks.entities;
+package overblocks.entities.comp;
 
 import arc.math.*;
 import arc.util.*;
-import ent.anno.*;
 import mindustry.*;
 import mindustry.entities.*;
 import mindustry.gen.*;

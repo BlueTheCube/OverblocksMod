@@ -22,7 +22,6 @@ public class OBUnitType extends UnitType{
         if (constructor == null) throw new IllegalArgumentException("Unit entity class `" + type + "` not registered.");
     }
 
-
     @Override
     public void setStats(){
         super.setStats();

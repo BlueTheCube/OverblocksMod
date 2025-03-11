@@ -16,23 +16,15 @@ import overblocks.type.*;
 
 import static arc.graphics.g2d.Draw.*;
 import static arc.graphics.g2d.Lines.*;
-import static ent.anno.Annotations.EntityDef;
 
 @SuppressWarnings("unused")
 public class OBUnitTypes{
-    //vanilla entities units
 
-    //relayer tree
-    public static @EntityDef({Unitc.class, Mechc.class, Dodgec.class}) UnitType relayer, announcer, agent, spy, undercover;
-
-    //mr. boomerang unit?
-
-    //radial damage unit?
-
-    //steam-based unit?
+    public static UnitType relayer, announcer, agent, spy, undercover;
 
     public static void load(){
 
+        //region patrol
         relayer = new OBUnitType("relayer", DodgeMechUnit.class){{
             dodge = 0.5f;
             speed = 0.5f;
@@ -135,5 +127,40 @@ public class OBUnitTypes{
                 }};
             }});
         }};
+
+        /*agent = new OBUnitType("agent", InvisibleMechUnit.class){{
+            speed = 0.43f;
+            hitSize = 13f;
+            rotateSpeed = 3f;
+            targetAir = false;
+            health = 900;
+            armor = 9f;
+            mechFrontSway = 0.55f;
+            ammoType = new ItemAmmoType(Items.graphite);
+
+            weapons.add(new Weapon(name + "-weapon"){{
+                top = false;
+                y = 1f;
+                x = 9f;
+                reload = 60f;
+                recoil = 4f;
+                shake = 2f;
+                ejectEffect = Fx.casing2;
+                shootSound = Sounds.artillery;
+                bullet = new ArtilleryBulletType(2f, 20, "shell"){{
+                    hitEffect = Fx.blastExplosion;
+                    knockback = 0.8f;
+                    lifetime = 120f;
+                    width = height = 14f;
+                    collides = true;
+                    collidesTiles = true;
+                    splashDamageRadius = 35f;
+                    splashDamage = 80f;
+                    backColor = Pal.bulletYellowBack;
+                    frontColor = Pal.bulletYellow;
+                }};
+            }});
+        }};*/
+        //endregion
     }
 }
