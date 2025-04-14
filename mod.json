@@ -2,7 +2,7 @@
     "displayName": "Overblocks Mod",
     "description": "A Mindustry Java mod.",
     "version": "0.0.1",
-    "minGameVersion": "146",
+    "minGameVersion": "147",
     "author": "BlueTheCube",
     "java": true,
     "main": "overblocks.OverblocksMod"

@@ -15,6 +15,7 @@ buildscript{
     repositories{
         if(!useJitpack) maven("https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository")
         maven("https://jitpack.io")
+        maven("https://maven.xpdustry.com/mindustry")
     }
 }
 
